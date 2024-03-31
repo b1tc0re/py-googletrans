@@ -55,7 +55,7 @@ class Translator:
                  timeout: Timeout = None,
                  http2=True):
 
-        self.client = httpx.Client(http2=http2)
+        self.client = httpx.Client(http2=http2, verify=false)
         if proxies is not None:  # pragma: nocover
             self.client.proxies = proxies
 
